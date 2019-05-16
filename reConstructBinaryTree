@@ -1,0 +1,100 @@
+public class reConstructBinaryTree {
+	public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+		TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
+        return root;
+		 
+    }
+	 private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
+		
+		if(startPre>endPre||startIn>endIn){
+			return null;
+		}
+		TreeNode root = new TreeNode(pre[startPre]);
+        for(int i = startPre;i<endIn;i++){
+        	if(in[i] ==pre[startPre]){
+        			root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1);
+        			root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn);
+        			break;
+        		
+        	}
+        }
+		// TODO Auto-generated method stub
+		return root;
+	}
+}
+class TreeNode{
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int val){
+		this.val = val;
+	}
+}
+package com.mcd.test;
+
+public class reConstructBinaryTree {
+	public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+		TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
+        return root;
+		 
+    }
+	 private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
+		
+		if(startPre>endPre||startIn>endIn){
+			return null;
+		}
+		TreeNode root = new TreeNode(pre[startPre]);
+        for(int i = startPre;i<endIn;i++){
+        	if(in[i] ==pre[startPre]){
+        			root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1);
+        			root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn);
+        			break;
+        		
+        	}
+        }
+		// TODO Auto-generated method stub
+		return root;
+	}
+}
+class TreeNode{
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int val){
+		this.val = val;
+	}
+}
+
+
+public class reConstructBinaryTree {
+	public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+		TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
+        return root;
+		 
+    }
+	 private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
+		
+		if(startPre>endPre||startIn>endIn){
+			return null;
+		}
+		TreeNode root = new TreeNode(pre[startPre]);
+        for(int i = startPre;i<endIn;i++){
+        	if(in[i] ==pre[startPre]){
+        			root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1);
+        			root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn);
+        			break;
+        		
+        	}
+        }
+		// TODO Auto-generated method stub
+		return root;
+	}
+}
+class TreeNode{
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int val){
+		this.val = val;
+	}
+}
